@@ -1,2 +1,2 @@
-# temu.github.io
-pagetest2022
+# temu
+Just a beginner trying to learn github.
