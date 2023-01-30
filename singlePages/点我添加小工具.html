@@ -1,32 +1,40 @@
 <!doctype html>
 <html>
 
-<head> 
+<head>
     <meta charset="utf-8">
-</head> 
-    <title>AutoComplete</title>
-<body> 
+</head>
+    <title>SmallTools</title>
+<body>
   <p>将这个链接拖到收藏夹：  </p>
+
+<ol>
+
+  <li><a href="javascript:void%20function(){(function(){(sASIN=prompt(%22Please%20input%20an%20ASIN%22,%22%22))%26%26(sASIN=sASIN.replace(/(^\s*)+|(\s*$)/g,%22%22),window.location.href=%22https://www.amazon.com/dp/%22+sASIN)})()}();">
+    ASIN跳转
+  </a> <span>： (美国站)用ASIN直接跳转Listing页面。</span></li>
+  <li><a href="javascript:void%20function(){(function(){(sASIN=prompt(%22Please%20input%20an%20ASIN%22,%22%22))%26%26(sASIN=sASIN.replace(/(^\s*)+|(\s*$)/g,%22%22),window.location.href=%22https://www.amazon.com/ask/questions/asin/%22+sASIN+%22/1/ref=ask_ql_psf_ql_hza%3Fsort=SUBMIT_DATE%22)})()}();">
+    QA跳转
+  </a> <span>：(美国站)用ASIN直接跳转Listing的QA页面，并按时间排序。</span></li> 
+</ol>
+
+<br>
+
+  <p>旧小工具：  </p>
 
 <ol>
   <li><a href="javascript:void%20function(){(function(){var%20n=document.getElementById(%22fba-inbound-shipment-workflow-summary-tracking-spd-items%22),e=n.getElementsByTagName(%22input%22);if(sInput=prompt(%22Bitte%20Anfangsnummer%20eingeben.%22,%221%22)){sInput=sInput.replace(/(^\s*)+|(\s*$)/g,%22%22);var%20t=parseInt(sInput);sInput2=prompt(%22Wie%20Viele%20Nr.%20zu%20Schreiben%3F%22,String(e.length-t+1)),sInput2=sInput2.replace(/(^\s*)+|(\s*$)/g,%22%22);var%20s=parseInt(sInput2)}var%20r=0,u=t-1+s;for(t+s-1%3Ee.length%26%26(u=e.length),r=t-1;u-1%3Er;r++)e[r+1].focus(),e[r+1].value=%220%22+String(Number(e[r].value)+1)})()}();">
     分段填运单
-  </a></li>
+  </a></nbsp;> <span>: (德国站)给FBA包裹批量填运单号。</span> </li>
   <li><a href="javascript:(function(){%20var%20x%20=%20document.getElementById('fba-inbound-shipment-workflow-summary-tracking-spd-items');%20%20var%20y%20=%20x.getElementsByTagName('input');%20%20var%20r%20=%20confirm('Insgesamt:%20'%20+%20String(y.length)%20+%20'%20Zetteln.%20Schreiben%20Jetzt?');%20if%20(r%20==%20false)%20{return}%20var%20i%20=%200;%20for%20(i=0;%20i<y.length;%20i++)%20{y[i+1].focus();%20y[i+1].value%20=%20'0'%20+%20String(Number(y[i].value)+1);%20}%20})();">
     填运单(旧版)
-  </a></li>
+  </a> <span>: (德国站)批量填运单，但不能分段。</span></li>
   <li><a href="javascript:void%20function(){(function(){(sFBA=prompt(%22Bitte%20ein%20FBA%20Nummer%20eingeben.%22,%22%22))%26%26(sFBA=sFBA.replace(/(^\s*)+|(\s*$)/g,%22%22),window.location.href=%22https://sellercentral.amazon.de/gp/fba/inbound-shipment-workflow/index.html%23%22+sFBA+%22/prepare%22)})()}();">
     FBA跳转
-  </a></li>
+  </a> <span>: (德国站)用FBA编号直接跳转到FBA详情页面，节省输入和搜索时间。</span></li>
   <li><a href="javascript:(function()%7Bjavascript%3A%20(function()%7Bif%20(sFBA%20%3D%20prompt('Bitte%20ein%20Bestell-Nummer%20eingeben.'%2C''))%7BsFBA%3DsFBA.replace(%2F(%5E%5Cs*)%2B%7C(%5Cs*%24)%2Fg%2C%20%22%22)%3Bwindow.location.href%3D'https%3A%2F%2Fsellercentral.amazon.de%2Fhz%2Forders%2Fdetails%3F_encoding%3DUTF8%26orderId%3D'%20%2B%20sFBA%20%2B%20'%26ref_%3Dag_orddet_cont_myo'%3B%7D%7D)()%7D)()">
     Prime跳转
-  </a></li>
-  <li><a href="javascript:void%20function(){(function(){(sASIN=prompt(%22Please%20input%20an%20ASIN%22,%22%22))%26%26(sASIN=sASIN.replace(/(^\s*)+|(\s*$)/g,%22%22),window.location.href=%22https://www.amazon.com/dp/%22+sASIN)})()}();">
-    ASIN跳转
-  </a></li>
-  <li><a href="javascript:void%20function(){(function(){(sASIN=prompt(%22Please%20input%20an%20ASIN%22,%22%22))%26%26(sASIN=sASIN.replace(/(^\s*)+|(\s*$)/g,%22%22),window.location.href=%22https://www.amazon.com/ask/questions/asin/%22+sASIN+%22/1/ref=ask_ql_psf_ql_hza%3Fsort=SUBMIT_DATE%22)})()}();">
-    QA跳转
-  </a></li> 
+  </a><span>: (德国站)根据订单号，掉转到Dropship订单页面。</span></li>
 </ol>
   </body> 
 </html>
